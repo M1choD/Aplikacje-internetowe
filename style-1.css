@@ -1,0 +1,62 @@
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+header, footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin-bottom: 0.3em;
+    color: #2c3e50;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.3em;
+    margin-top: 2em;
+    color: #444;
+}
+
+h3 {
+    color: #555;
+    margin-top: 1.5em;
+}
+
+ul {
+    background: #fff;
+    padding: 1em 2em;
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: 3rem;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Responsywność */
+@media (max-width: 700px) {
+    body {
+        font-size: 0.95em;
+    }
+    header, footer {
+        padding: 1rem;
+    }
+    main {
+        padding: 1rem;
+    }
+}
