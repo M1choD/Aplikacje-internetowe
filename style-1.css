@@ -1,62 +1,113 @@
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     margin: 0;
-    line-height: 1.6;
-    background-color: #f7f7f7;
+    background-color: #f9fafc;
     color: #222;
+    line-height: 1.7;
 }
 
+/* --- NAGŁÓWEK I STOPKA --- */
 header, footer {
-    background-color: #ffffff;
+    background-color: #0078d7;
+    color: white;
     text-align: center;
-    padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 2rem 1rem;
 }
 
-h1 {
-    margin-bottom: 0.3em;
-    color: #2c3e50;
-}
-
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 1.5rem;
-}
-
-h2 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 0.3em;
-    margin-top: 2em;
-    color: #444;
-}
-
-h3 {
-    color: #555;
-    margin-top: 1.5em;
-}
-
-ul {
-    background: #fff;
-    padding: 1em 2em;
-    border-radius: 8px;
+header p {
+    color: #e0f0ff;
 }
 
 footer {
-    margin-top: 3rem;
+    margin-top: 4rem;
     font-size: 0.9em;
-    color: #666;
 }
 
-/* Responsywność */
-@media (max-width: 700px) {
-    body {
-        font-size: 0.95em;
+/* --- STRUKTURA GŁÓWNA --- */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* --- NAGŁÓWKI --- */
+h1 {
+    margin-bottom: 0.3em;
+    font-size: 2em;
+}
+
+h2 {
+    color: #005a9e;
+    border-left: 6px solid #005a9e;
+    padding-left: 0.5em;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #0078d7;
+}
+
+/* --- UKŁAD SEKCJI --- */
+section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Naprzemienny układ sekcji */
+section:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #eef6ff;
+}
+
+section .content {
+    flex: 2;
+}
+
+section .image-block {
+    flex: 1;
+    height: 180px;
+    border-radius: 12px;
+}
+
+/* Kolorowe bloki dekoracyjne */
+section:nth-child(1) .image-block {
+    background: linear-gradient(135deg, #ffb84d, #ff7733);
+}
+section:nth-child(2) .image-block {
+    background: linear-gradient(135deg, #66ccff, #0066cc);
+}
+section:nth-child(3) .image-block {
+    background: linear-gradient(135deg, #81e979, #3fa34d);
+}
+
+/* --- LISTA --- */
+ul {
+    background: #fff5e6;
+    padding: 1rem 2rem;
+    border-left: 4px solid #ff9800;
+    border-radius: 8px;
+}
+
+/* --- RESPONSYWNOŚĆ --- */
+@media (max-width: 900px) {
+    section {
+        flex-direction: column;
     }
-    header, footer {
-        padding: 1rem;
+
+    section:nth-child(even) {
+        flex-direction: column;
     }
-    main {
-        padding: 1rem;
+
+    section .image-block {
+        width: 100%;
+        height: 140px;
     }
 }
